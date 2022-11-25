@@ -18,20 +18,20 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-<body>
-<div>
-    <form action="receiver.php" method="GET">
+<body >
+<div class="contenitore">
+    <form action="receiver.php" method="POST">
                 <div class="mb-3 ">
                   <label for="paragraph" class="form-label">Write your paragraph...</label>
-                  <input type="text" name="paragraph" id="paragraph" class="form-control" placeholder="type your paragraph here">
+                  <textarea type="text" name="paragraph" id="paragraph" class="form-control" placeholder="type your paragraph here"></textarea>
                 </div>
     
                 <div class="mb-3">
                   <label for="badword" class="form-label">Write a word to censor from your paragraph</label>
                   <input type="text" name="badword" id="badword" class="form-control" placeholder="type your censored word here">
                 </div>
-    
-                <button type="submit" class="btn btn-primary mt-3">Print</button>
+   
+                <button type="submit" class="btn btn-warning mt-3">Print</button>
             </form>
 </div>
 </body>

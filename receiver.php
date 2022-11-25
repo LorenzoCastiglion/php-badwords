@@ -1,9 +1,13 @@
 <?php
 
-$paragraph = trim($_GET['paragraph']);
-$badword = trim($_GET['badword']);
+$paragraph = trim($_POST['paragraph']);
+$badword = trim($_POST['badword']);
 
 $new_paragraph = str_replace($badword, '***', $paragraph);
+
+
+
+
 
 ?>
 
@@ -19,15 +23,16 @@ $new_paragraph = str_replace($badword, '***', $paragraph);
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <div class="container mt-5">
+<body class="response">
+    <div class="contenitore ">
         <h3>Original paragraph</h3>
         <p><?php echo $paragraph; ?></p>
-        <div class="mb-4">Lunghezza: <?php echo strlen($paragraph); ?> caratteri.</div>
+        <div class="mb-4">Lunghezza: <?php echo strlen($paragraph); ?> words.</div>
 
         <h3>Censored paragraph</h3>
         <p><?php echo $new_paragraph; ?></p>
-        <div class="mb-4">Lunghezza: <?php echo strlen($new_paragraph); ?> caratteri.</div>
+        <div class="mb-4">Lunghezza: <?php echo strlen($new_paragraph); ?> words.</div>
+       
     </div>
 
 </body>
